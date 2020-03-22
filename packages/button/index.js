@@ -1,7 +1,7 @@
-import ChButton from './src/button';
+import liButton from './src/button';
 
-ChButton.install = function(Vue) {
-  Vue.component(ChButton.name, ChButton);
+liButton.install = function(Vue) {
+  Vue.component(liButton.name, liButton);
 };
 
-export default ChButton;
+export default liButton;

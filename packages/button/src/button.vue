@@ -1,78 +1,65 @@
 <template>
   <button
-    class="ch-button"
+    class="li-button"
     @click="handleClick"
-    :disabled="buttonDisabled || loading"
+    :disabled="disabled || loading"
     :autofocus="autofocus"
     :type="nativeType"
-    :class="[
-      type ? 'ch-button--' + type : '',
-      buttonSize ? 'ch-button--' + buttonSize : '',
-      {
-        'is-disabled': buttonDisabled,
-        'is-loading': loading,
-        'is-plain': plain,
-        'is-round': round,
-        'is-circle': circle
-      }
-    ]"
+    :class="classChange"
   >
-    <i class="ch-icon-loading" v-if="loading"></i>
-    <i :class="icon" v-if="icon && !loading"></i>
-    <span v-if="$slots.default"><slot></slot></span>
+    <i class="li-icon-loading" v-if="loading"></i>
+    <!-- <i :class="icon" v-if="icon && !loading"></i> -->
+    <span v-if="$slots.default">
+      <slot></slot>
+    </span>
   </button>
 </template>
 <script>
-  export default {
-    name: 'ChButton',
-
-    inject: {
-      chForm: {
-        default: ''
-      },
-      chFormItem: {
-        default: ''
-      }
+export default {
+  name: "LiButton",
+  props: {
+    type: {
+      // 按钮类型 primary / success / warning / danger / info / text
+      type: String,
+      default: "default"
     },
-
-    props: {
-      type: {
-        type: String,
-        default: 'default'
-      },
-      size: String,
-      icon: {
-        type: String,
-        default: ''
-      },
-      nativeType: {
-        type: String,
-        default: 'button'
-      },
-      loading: Boolean,
-      disabled: Boolean,
-      plain: Boolean,
-      autofocus: Boolean,
-      round: Boolean,
-      circle: Boolean
+    size: String, // 按钮大小  small / mini
+    icon: {
+      // icon 图标
+      type: String,
+      default: ""
     },
-
-    computed: {
-      _ChFormItemSize() {
-        return (this.chFormItem || {}).chFormItemSize;
-      },
-      buttonSize() {
-        return this.size || this._ChFormItemSize || (this.$chEMENT || {}).size;
-      },
-      buttonDisabled() {
-        return this.disabled || (this.chForm || {}).disabled;
-      }
+    nativeType: {
+      // 原生 type 属性
+      type: String,
+      default: "button"
     },
-
-    methods: {
-      handleClick(e) {
-        this.$emit('click', e);
-      }
+    loading: Boolean, // 是否loading
+    disabled: Boolean, // 是否loading
+    plain: Boolean, // 朴素按钮
+    autofocus: Boolean, // 是否默认聚焦
+    round: Boolean, // 是否圆角按钮
+    circle: Boolean // 是否圆形按钮
+  },
+  computed: {
+    classChange() {
+      return [
+        this.type ? "li-button--" + this.type : "",
+        this.size ? "li-button--" + this.size : "",
+        {
+          "is-disabled": this.disabled,
+          "is-loading": this.loading,
+          "is-plain": this.plain,
+          "is-round": this.round,
+          "is-circle": this.circle
+        }
+      ];
     }
-  };
+  },
+  methods: {
+    handleClick(e) {
+      this.$emit("click", e);
+    }
+  }
+};
 </script>
