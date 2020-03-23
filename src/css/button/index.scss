@@ -20,16 +20,12 @@
   -ms-user-select: none;
   padding: 10px 18px;
   font-size: 14px;
-  border-radius: 4px;
+  border-radius: 2px;
 
   &:hover {
     background: rgb(241, 238, 238);
     border: 1px solid #c3c7cf;
     color: #494b50;
-  }
-
-  &.is_loading {
-    cursor: not-allowed;
   }
 
   &.is-round {
@@ -42,6 +38,13 @@
     width: 36px;
   }
 
+  &.is-loading {
+    cursor: not-allowed;
+    background: rgb(252, 249, 249);
+    border: 1px solid #dbdde0;
+    color: #acacac;
+  }
+
   &.is-disabled {
     cursor: not-allowed;
     background: rgb(252, 249, 249);
@@ -52,38 +55,38 @@
 
 .li-button--primary {
   color: #fff;
-  background-color: #48a1fa;
-  border-color: #48a1fa;
+  background-color: #1c7ed6;
+  border-color: #1c7ed6;
 
   &:hover {
     color: #fff;
-    background-color: #54a8fc;
-    border-color: #54a8fc;
-  }
-
-  &.is_loading {
-    color: #fff;
-    background-color: #54a8fc;
-    border-color: #54a8fc;
-    cursor: not-allowed;
+    background-color: #196eb9;
+    border-color: #1c7ed6;
   }
 
   &.is-plain {
-    color: #409eff;
-    background: #ecf5ff;
-    border-color: #b3d8ff;
+    color: #ffffff;
+    background: #9dc3e4;
+    border-color: #9dc3e4;
   }
 
   &.is-plain:hover {
     color: #fff;
-    background-color: #48a1fa;
-    border-color: #48a1fa;
+    background-color: #1c7ed6;
+    border-color: #1c7ed6;
   }
 
   &.is-disabled {
     cursor: not-allowed;
     color: #fff;
-    background-color: #87c1fa;
+    background-color: #4293da;
+    border-color: #7dbcfc;
+  }
+
+  &.is_loading {
+    cursor: not-allowed;
+    color: #fff;
+    background-color: #4293da;
     border-color: #7dbcfc;
   }
 }
@@ -97,13 +100,6 @@
     color: rgb(255, 255, 255);
     background-color: #2fa86c;
     border-color: #48ca89;
-  }
-
-  &.is_loading {
-    color: rgb(255, 255, 255);
-    background-color: #2fa86c;
-    border-color: #48ca89;
-    cursor: not-allowed;
   }
 
   &.is-plain {
@@ -124,6 +120,13 @@
     background-color: #58db9a;
     border-color: #38ce83;
   }
+
+  &.is_loading {
+    cursor: not-allowed;
+    color: #fff;
+    background-color: #58db9a;
+    border-color: #38ce83;
+  }
 }
 
 .li-button--warning {
@@ -135,13 +138,6 @@
     color: #fff;
     background-color: rgb(253, 178, 65);
     border-color: rgb(253, 178, 65);
-  }
-
-  &.is_loading {
-    color: #fff;
-    background-color: rgb(253, 178, 65);
-    border-color: rgb(253, 178, 65);
-    cursor: not-allowed;
   }
 
   &.is-plain {
@@ -162,6 +158,13 @@
     background-color: rgb(252, 185, 86);
     border-color: rgb(252, 186, 88);
   }
+
+  &.is_loading {
+    cursor: not-allowed;
+    color: #fff;
+    background-color: rgb(252, 185, 86);
+    border-color: rgb(252, 186, 88);
+  }
 }
 
 .li-button--danger {
@@ -173,13 +176,6 @@
     color: #fff;
     background-color: #ee7c60;
     border-color: #ee7c60;
-  }
-
-  &.is_loading {
-    color: #fff;
-    background-color: #ee7c60;
-    border-color: #ee7c60;
-    cursor: not-allowed;
   }
 
   &.is-plain {
@@ -200,39 +196,46 @@
     background-color: #fda38d;
     border-color: #fa8e73;
   }
+
+  &.is_loading {
+    cursor: not-allowed;
+    color: #fff;
+    background-color: #fda38d;
+    border-color: #fa8e73;
+  }
 }
 
 .li-button--info {
   color: #fff;
-  background-color: #a6a9af;
-  border-color: #a6a9af;
+  background-color: #495057;
+  border-color: #495057;
 
   &:hover {
     color: #fff;
-    background-color: #adb4c4;
-    border-color: #adb4c4;
-  }
-
-  &.is_loading {
-    color: #fff;
-    background-color: #adb4c4;
-    border-color: #adb4c4;
-    cursor: not-allowed;
+    background-color: #76818b;
+    border-color: #76818b;
   }
 
   &.is-plain {
-    color: #adb4c4;
-    background-color: #d7d9dd;
-    border-color: #bebfc2;
+    color: #ffffff;
+    background-color: #76818b;
+    border-color: #76818b;
   }
 
   &.is-plain:hover {
     color: #fff;
-    background-color: #a6a9af;
-    border-color: #a6a9af;
+    background-color: #495057;
+    border-color: #495057;
   }
 
   &.is-disabled {
+    cursor: not-allowed;
+    color: #fff;
+    background-color: #dcdee4;
+    border-color: #d3d4d6;
+  }
+
+  &.is-loading {
     cursor: not-allowed;
     color: #fff;
     background-color: #dcdee4;
@@ -258,6 +261,13 @@
   }
 
   &.is-disabled {
+    cursor: not-allowed;
+    color: #67b2fd;
+    border: none;
+    background: none;
+  }
+
+  &.is-loading {
     cursor: not-allowed;
     color: #67b2fd;
     border: none;

@@ -57,7 +57,7 @@
 
     <h3>加载状态</h3>
     <div class="button">
-      <li-button :loading = "true">默认按钮</li-button>
+      <li-button loading>默认按钮</li-button>
     </div>
 
     <h3>不同尺寸</h3>
