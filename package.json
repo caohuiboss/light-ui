@@ -1,0 +1,25 @@
+{
+  "name": "light-ui-color",
+  "version": "0.0.4",
+  "description": "Vue light-ui Components",
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "packages"
+  ],
+  "scripts": {
+    "bootstrap": "yarn || npm i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/caohuiboss/light-ui.git"
+  },
+  "style": "src/css/index.scss",
+  "author": "TimeGod",
+  "license": "ISC",
+  "keywords": [
+    "light",
+    "vue",
+    "components"
+  ]
+}
