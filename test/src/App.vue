@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h3>默认按钮</h3>
+    <!-- <h3>默认按钮</h3>
     <div class="button">
       <li-button>默认按钮</li-button>
       <li-button type="primary">主要按钮</li-button>
@@ -73,7 +73,14 @@
       <li-button circle>O</li-button>
       <li-button size="small" circle>O</li-button>
       <li-button size="mini" circle>O</li-button>
-    </div>
+    </div> -->
+
+    <!-- <div class="button"> -->
+    <li-card>
+      <div slot="header">1</div>
+      <div></div>
+    </li-card>
+    <!-- </div> -->
   </div>
 </template>
 

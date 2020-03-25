@@ -1,15 +1,15 @@
 // 组件批量导出目录
-import LiButton from '../packages/button/index.js';
-
+import LiButton from '../packages/button/index';
+import LiCard from '../packages/card/index';
 
 
 const components = {
-    LiButton
+    LiButton,
+    LiCard
 }
 
-const install = function (Vue, opts = {}) {
+const install = function (Vue) {
     Reflect.ownKeys(components).forEach(component => {
-        console.log(component)
         Vue.component(component, components[component]);
     });
 };
@@ -17,6 +17,7 @@ const install = function (Vue, opts = {}) {
 if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue);
 }
+
 
 export default {
     install,
