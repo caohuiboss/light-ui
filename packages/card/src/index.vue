@@ -20,23 +20,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-.li-card {
-  width: 480px;
-  height: 320px;
-  border: 1px solid gainsboro;
-  border-radius: 6px;
-  overflow: hidden;
-
-  .li-card__header {
-    width: 100%;
-    padding: 18px 20px;
-    border-bottom: 1px solid gainsboro;
-  }
-
-  .li-card__content {
-    margin: 10px;
-  }
-}
-</style>

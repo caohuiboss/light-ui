@@ -1,11 +1,15 @@
 // 组件批量导出目录
 import LiButton from '../packages/button/index';
 import LiCard from '../packages/card/index';
+import LiRow from '../packages/row/index';
+import LiCol from '../packages/row/index';
 
 
 const components = {
     LiButton,
-    LiCard
+    LiCard,
+    LiRow,
+    LiCol
 }
 
 const install = function (Vue) {
