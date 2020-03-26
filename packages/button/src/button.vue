@@ -8,7 +8,7 @@
     :class="classChange"
   >
     <i class="li-icon-loading" v-if="loading"></i>
-    <!-- <i :class="icon" v-if="icon && !loading"></i> -->
+    <i :class="icon" v-if="icon && !loading"></i>
     <span v-if="$slots.default">
       <slot></slot>
     </span>
@@ -26,6 +26,7 @@ export default {
     size: String, // 按钮大小  small / mini
     icon: {
       // icon 图标
+      // 暂无图标  可自行去阿里下载
       type: String,
       default: ""
     },

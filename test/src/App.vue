@@ -82,7 +82,19 @@
     </li-card> -->
     <!-- </div> -->
 
-    <li-row :gutter="24"></li-row>
+    <!-- <li-row :gutter="24">
+      <li-col :span="8">1</li-col>
+      <li-col :span="8">1</li-col>
+      <li-col :span="8">1</li-col>
+    </li-row> -->
+
+    <!-- <li-button-group>
+      <li-button type="primary" disabled>主要按钮</li-button>
+      <li-button type="success" disabled>成功按钮</li-button>
+    </li-button-group> -->
+    <li-tag closable>
+      123
+    </li-tag>
   </div>
 </template>
 

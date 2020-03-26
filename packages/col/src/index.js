@@ -34,7 +34,7 @@ export default {
   computed: {
     getGutter() {
       let parent = this.$parent
-      while (parent && parent.$options.name !== 'LiRow') {
+      while (parent && parent.$options.componentName !== 'LiRow') {
         parent = parent.$parent
       }
       return parent ? parent.gutter : 0
@@ -45,10 +45,11 @@ export default {
     const { getGutter, tag, $slots: { default: slot } } = this
     const classArray = []
     const style = {}
-
+    
     getGutter ? style.paddingLeft = style.paddingRight = getGutter / 2 + 'px' : ''
 
     ['span', 'offset', 'pull', 'push'].forEach(v => {
+      console.log(v)
       this[v] || this[v] === 0 ?
         classArray.push(
           v !== 'span'
