@@ -1,7 +1,7 @@
-import liButton from './src/button';
+import Button from './src/button';
 
-liButton.install = function(Vue) {
-  Vue.component(liButton.name, liButton);
+Button.install = function(Vue) {
+  Vue.component(Button.name, Button);
 };
 
-export default liButton;
+export default Button;

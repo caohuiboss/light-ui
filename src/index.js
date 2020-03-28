@@ -1,19 +1,21 @@
 // 组件批量导出目录
-import LiButton from '../packages/button/index';
-import LiButtonGroup from '../packages/button-group/index';
-import LiCard from '../packages/card/index';
-import LiRow from '../packages/row/index';
-import LiCol from '../packages/col/index';
-import LiTag from '../packages/tag/index';
+import Button from '../packages/button/index';
+import ButtonGroup from '../packages/button-group/index';
+import Card from '../packages/card/index';
+import Row from '../packages/row/index';
+import Col from '../packages/col/index';
+import Tag from '../packages/tag/index';
+import Dialog from '../packages/dialog/index';
 
 
 const components = {
-    LiButton,
-    LiCard,
-    LiRow,
-    LiCol,
-    LiButtonGroup,
-    LiTag
+    Button,
+    Card,
+    Row,
+    Col,
+    ButtonGroup,
+    Tag,
+    Dialog
 }
 
 const install = function (Vue) {

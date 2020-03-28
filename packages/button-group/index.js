@@ -1,7 +1,7 @@
-import LiButtonGroup from './src/index';
+import ButtonGroup from './src/index';
 
-LiButtonGroup.install = function(Vue) {
-  Vue.component(LiButtonGroup.name, LiButtonGroup);
+ButtonGroup.install = function(Vue) {
+  Vue.component(ButtonGroup.name, ButtonGroup);
 };
 
-export default LiButtonGroup;
+export default ButtonGroup;

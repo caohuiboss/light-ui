@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "LiCard",
+  name: "Card",
   props: {
     header: {},
     contentStyle: {}

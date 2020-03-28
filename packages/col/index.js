@@ -1,7 +1,7 @@
-import LiCol from './src/index.js';
+import Col from './src/index.js';
 
-LiCol.install = function(Vue) {
-  Vue.component(LiCol.name, LiCol);
+Col.install = function(Vue) {
+  Vue.component(Col.name, Col);
 };
 
-export default LiCol;
+export default Col;

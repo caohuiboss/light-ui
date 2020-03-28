@@ -1,7 +1,7 @@
-import liCard from './src/index.vue';
+import Card from './src/index.vue';
 
-liCard.install = function(Vue) {
-  Vue.component(liCard.name, liCard);
+Card.install = function(Vue) {
+  Vue.component(Card.name, Card);
 };
 
-export default liCard;
+export default Card;

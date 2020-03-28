@@ -8,7 +8,7 @@
 // theme	主题	string	dark / light / plain	light
 
 export default {
-  name: "LiTag",
+  name: "Tag",
   props: {
     closable: Boolean,
     type: String,

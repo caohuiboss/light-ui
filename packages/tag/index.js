@@ -1,7 +1,7 @@
-import LiTag from './src/index';
+import Tag from './src/index';
 
-LiTag.install = function(Vue) {
-  Vue.component(LiTag.name, LiTag);
+Tag.install = function(Vue) {
+  Vue.component(Tag.name, Tag);
 };
 
-export default LiTag;
+export default Tag;

@@ -1,5 +1,5 @@
 export default {
-  name: "LiCol",
+  name: "Col",
 
   // span	栅格占据的列数	number	—	24
   // offset	栅格左侧的间隔格数	number	—	0

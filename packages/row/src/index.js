@@ -1,5 +1,5 @@
 export default {
-  name: "LiRow",
+  name: "Row",
   componentName:"LiRow",
 // gutter	栅格间隔	number	—	0
 // type	布局模式，可选 flex，现代浏览器下有效	string	—	—
