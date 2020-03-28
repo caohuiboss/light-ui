@@ -1,20 +1,22 @@
 <template>
-  <div class="li-dialog-backdrop" v-if="closed">
-    <div class="li-dialog" ref="dialog" :style="styles">
-      <div class="li-dialog-header">
-        <slot name="header"></slot>
-        <button class="li-close" v-if="showClose" @click="handleClose">
-          x
-        </button>
-      </div>
-      <div class="li-dialog-body">
-        <slot></slot>
-      </div>
-      <div class="li-dialog-footer" v-if="$slots.footer">
-        <slot name="footer"></slot>
+  <transition name="toggle">
+    <div class="li-dialog-backdrop" v-if="visible">
+      <div class="li-dialog" ref="dialog" :style="styles">
+        <div class="li-dialog-header">
+          <slot name="header"></slot>
+          <button class="li-close" v-if="showClose" @click="onClose">
+            关闭
+          </button>
+        </div>
+        <div class="li-dialog-body">
+          <slot></slot>
+        </div>
+        <div class="li-dialog-footer" v-if="$slots.footer">
+          <slot name="footer"></slot>
+        </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 <script>
 export default {
@@ -30,20 +32,9 @@ export default {
       default: false
     }
   },
-  watch: {
-    visible(val) {
-      if (val) {
-        this.closed = true;
-        this.$emit("open");
-      } else {
-        this.closed = false;
-        this.$emit("close");
-      }
-    }
-  },
   data() {
     return {
-      closed: false
+      closeTimer: null
     };
   },
   computed: {
@@ -52,17 +43,14 @@ export default {
     }
   },
   methods: {
-    handleClose() {
-      this.closed = false;
+    onClose() {
+      this.$emit("on-close");
+      this.hide();
+    },
+    hide() {
       this.$emit("update:visible", false);
-      this.$emit("close");
-      this.$el.parentNode.removeChild(this.$el);
+      this.$emit("on-closed");
     }
-  },
-  destroyed() {
-    this.$el.parentNode.removeChild(this.$el);
   }
 };
 </script>
-
-<style lang="scss"></style>

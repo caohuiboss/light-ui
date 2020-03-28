@@ -1,53 +1,63 @@
 .li-dialog-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  .li-dialog {
+    width: 50%;
+    padding: 10px;
+    margin: auto;
+    background-color: white;
+    border-radius: 4px;
+    position: relative;
+    top: 20%;
     overflow: hidden;
-    z-index: 99999;
-    background-color: rgba(0, 0, 0, 0.4);
-  
-    .li-dialog {
-      width: 50%;
-      padding: 20px 10px;
-      margin: auto;
-      background-color: white;
-      border-radius: 4px;
-      position: relative;
-      top: 20%;
-      overflow: hidden;
-  
-      .li-dialog-header {
-        width: 100%;
-        padding: 10px 0;
-        // background-color: navajowhite;
-        display: flex;
-        justify-content: space-between;
-  
-        .li-close {
-          width: 20px;
-          height: 20px;
-          text-align: center;
-          border-radius: 50%;
-          font-weight: bold;
-          border: none;
-          outline-style: none;
-        }
-  
-        .li-close:hover {
-          background-color: cornsilk;
-        }
+
+    .li-dialog-header {
+      width: 100%;
+      padding: 2px 0;
+      font-size: 16px;
+      display: flex;
+      justify-content: space-between;
+
+      .li-close {
+        width: 50px;
+        height: 20px;
+        text-align: center;
+        border: none;
+        background: none;
+        outline-style: none;
       }
-  
-      .li-dialog-body {
-        width: 100%;
-        padding: 10px 0;
-      }
-  
-      .li-dialog-footer {
-        width: 100%;
-        padding: 10px 0;
+
+      .li-close:hover {
+        background-color: whitesmoke;
       }
     }
+
+    .li-dialog-body {
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    .li-dialog-footer {
+      width: 100%;
+      padding: 10px 0;
+    }
   }
+}
+
+.toggle-enter,
+.toggle-leave-active {
+  opacity: 0;
+  transform: translatey(-10px);
+}
+
+.toggle-enter-active,
+.toggle-leave-active {
+  transition: all ease 0.2s;
+}

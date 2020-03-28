@@ -96,16 +96,20 @@
       123
     </Tag> -->
 
-    <Dialog :visible="dialog">
+    <!-- <Dialog :visible.sync="dialog">
       <div slot="header">
-        111
+        标题
       </div>
-      <div slot="body">
-        11
+      <div>
+        内容
+      </div>
+      <div slot="footer">
+        <Button @click="open">主要按钮</Button>
+        <Button @click="open">主要按钮</Button>
       </div>
     </Dialog>
 
-    <Button type="primary" @click="open">主要按钮</Button>
+    <Button type="primary" @click="open">主要按钮</Button> -->
   </div>
 </template>
 
@@ -119,7 +123,6 @@ export default {
   },
   methods: {
     open() {
-      console.log(1)
       this.dialog = true;
     }
   }
