@@ -12,7 +12,7 @@ npm i light-ui-color
 
 // vue main.js
 import lightUI from 'light-ui-color'
-import "light-ui-color/src/css/index.scss"
+import "light-ui-color/lib/index.css"
 
 ```
 

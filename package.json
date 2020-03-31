@@ -1,14 +1,16 @@
 {
   "name": "light-ui-color",
-  "version": "0.0.8",
+  "version": "0.0.11",
   "description": "Vue light-ui Components",
   "main": "src/index.js",
   "files": [
     "src",
-    "packages"
+    "packages",
+    "lib"
   ],
   "scripts": {
-    "bootstrap": "yarn || npm i"
+    "bootstrap": "yarn || npm i",
+    "build:scss": "npx webpack"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,15 @@
     "light",
     "vue",
     "components"
-  ]
+  ],
+  "devDependencies": {
+    "css-loader": "^3.4.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
 }

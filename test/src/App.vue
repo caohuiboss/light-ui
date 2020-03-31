@@ -88,10 +88,10 @@
       <Col :span="8">1</Col>
     </li-row> -->
 
-    <!-- <Button-group>
+    <Button-group>
       <Button type="primary" disabled>主要按钮</Button>
       <Button type="success" disabled>成功按钮</Button>
-    </Button-group> -->
+    </Button-group>
     <!-- <Tag closable>
       123
     </Tag> -->
