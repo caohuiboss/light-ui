@@ -23,14 +23,6 @@
   border-radius: 2px;
   margin: 0 4px;
 
-  @keyframes rotating {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
 
   &:hover {
     background: rgb(241, 238, 238);
@@ -56,12 +48,22 @@
     overflow: hidden;
 
     .li-icon-loading::before {
-      content: "*";
+      content: "+";
       text-align: center;
     }
 
     .li-icon-loading {
+      display: inline-block;
       animation: rotating 2s linear infinite;
+    }
+
+    @keyframes rotating {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
     }
   }
 

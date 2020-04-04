@@ -88,10 +88,11 @@
       <Col :span="8">1</Col>
     </li-row> -->
 
-    <Button-group>
+    <!-- <Button-group>
       <Button type="primary" disabled>主要按钮</Button>
       <Button type="success" disabled>成功按钮</Button>
-    </Button-group>
+      <Button loading>默认按钮</Button>
+    </Button-group> -->
     <!-- <Tag closable>
       123
     </Tag> -->
@@ -110,22 +111,27 @@
     </Dialog>
 
     <Button type="primary" @click="open">主要按钮</Button> -->
+    <tags hit>
+      123
+    </tags>
   </div>
 </template>
 
 <script>
+import tags from "./tag";
 export default {
   name: "App",
+  components: { tags },
   data() {
     return {
-      dialog: false
+      dialog: false,
     };
   },
   methods: {
     open() {
       this.dialog = true;
-    }
-  }
+    },
+  },
 };
 </script>
 

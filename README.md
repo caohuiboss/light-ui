@@ -1,8 +1,9 @@
-# Light-UI 组件库
-[Light-UI文档](https://caohuiboss.gitee.io/blog/views/Light-UI/light-ui.html)
+# Light-UI (靓仔UI) 组件库
+[Light-UI文档](https://caohuiboss.gitee.io/blog/views/Light-UI/light-ui-color.html)
 
 
 #### 介绍
+
 自己的Vue轻量组件库,很轻很轻的那种
 
 
