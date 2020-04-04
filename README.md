@@ -1,5 +1,5 @@
 # Light-UI 组件库
-[Light-UI文档](https://caohuiboss.gitee.io/blog/views/Light-UI/light-ui.html)
+[Light-UI文档](https://caohuiboss.gitee.io/blog/views/Light-UI/light-ui-color.html)
 
 
 #### 介绍
