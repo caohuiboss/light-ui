@@ -8,23 +8,35 @@ module.exports = {
         path: path.resolve(__dirname, 'lib')
     },
     module: {
-        rules: [{
-            test: /\.scss$/,
-            use: [
-                {
-                    loader: MiniCssExtractPlugin.loader
-                },
-                {
-                    loader: "css-loader",
-                    options: {
-                        importLoaders: 2
-                    } // 将 CSS 转化成 CommonJS 模块
-                },
-                {
-                    loader: "sass-loader" // 将 Sass 编译成 CSS
+        rules: [
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader
+                    },
+                    {
+                        loader: "css-loader",
+                        options: {
+                            importLoaders: 2
+                        } // 将 CSS 转化成 CommonJS 模块
+                    },
+                    {
+                        loader: "sass-loader" // 将 Sass 编译成 CSS
+                    }
+                ]
+            },
+            {
+                test: /\.(eot|ttf|svg|woff|woff2)$/,
+                use: {
+                    loader: 'url-loader'
                 }
-            ]
-        }]
+            }
+        ]
     },
     plugins: [
         // Where the compiled SASS is saved to

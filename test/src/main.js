@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 
 import LightUI from '../../src/index';
-import '../../src/css/index.scss'
+import '../../lib/index.css'
 
 
 Vue.use(LightUI)

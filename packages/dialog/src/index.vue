@@ -5,7 +5,7 @@
         <div class="li-dialog-header">
           <slot name="header"></slot>
           <button class="li-close" v-if="showClose" @click="onClose">
-            关闭
+            <i class="iconfont li-icon-guanbi"></i>
           </button>
         </div>
         <div class="li-dialog-body">

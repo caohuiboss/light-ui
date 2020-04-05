@@ -76,10 +76,10 @@
     </div> -->
 
     <!-- <div class="button"> -->
-    <!-- <Card>
+    <Card>
       <div slot="header">1</div>
       <div></div>
-    </Card> -->
+    </Card>
     <!-- </div> -->
 
     <!-- <li-row :gutter="24">
@@ -111,17 +111,36 @@
     </Dialog>
 
     <Button type="primary" @click="open">主要按钮</Button> -->
-    <tags hit>
+    <!-- <tags hit>
       123
-    </tags>
+    </tags> -->
+
+    <Button-Group>
+      <Button type="primary" icon="li-icon-zuo" round @click="dialog = true">主要按钮</Button>
+      <Button type="primary">主要按钮</Button>
+      <Button type="primary" icon="li-icon-zuo-copy" round>成功按钮</Button>
+    </Button-Group>
+
+    <Dialog :visible.sync="dialog">
+      <div slot="header">
+        标题
+      </div>
+      <div>
+        内容
+      </div>
+      <div slot="footer">
+        <Button @click="open">主要按钮</Button>
+        <Button @click="open">主要按钮</Button>
+      </div>
+    </Dialog>
   </div>
 </template>
 
 <script>
-import tags from "./tag";
+// import tags from "./tag";
 export default {
   name: "App",
-  components: { tags },
+  // components: { tags },
   data() {
     return {
       dialog: false,
@@ -129,7 +148,7 @@ export default {
   },
   methods: {
     open() {
-      this.dialog = true;
+      this.dialog = false;
     },
   },
 };

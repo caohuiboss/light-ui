@@ -23,7 +23,6 @@
   border-radius: 2px;
   margin: 0 4px;
 
-
   &:hover {
     background: rgb(241, 238, 238);
     border: 1px solid #c3c7cf;
@@ -40,31 +39,19 @@
     width: 36px;
   }
 
+  &.is-icon {
+    padding: 0px;
+    i {
+      margin-right: 4px;
+    }
+  }
+
   &.is-loading {
     cursor: not-allowed;
     background: rgb(252, 249, 249);
     border: 1px solid #dbdde0;
     color: #acacac;
     overflow: hidden;
-
-    .li-icon-loading::before {
-      content: "+";
-      text-align: center;
-    }
-
-    .li-icon-loading {
-      display: inline-block;
-      animation: rotating 2s linear infinite;
-    }
-
-    @keyframes rotating {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
   }
 
   &.is-disabled {
@@ -326,4 +313,55 @@
 .li-button-group {
   display: inline-block;
   vertical-align: middle;
+
+  & > .li-button {
+    float: left;
+    position: relative;
+    margin: 0px;
+
+    .is-icon {
+      padding: 0px;
+    }
+
+    & + .li-button {
+      margin-left: 0;
+    }
+    &.is-disabled {
+      z-index: 1;
+    }
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    &:first-child:last-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+
+      &.is-round {
+        border-radius: 20px;
+      }
+
+      &.is-circle {
+        border-radius: 50%;
+      }
+    }
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+    &:not(:last-child) {
+      margin-right: -1px;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      z-index: 1;
+    }
+  }
 }
