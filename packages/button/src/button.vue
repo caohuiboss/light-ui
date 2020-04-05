@@ -58,7 +58,7 @@ export default {
           "is-plain": this.plain,
           "is-round": this.round,
           "is-circle": this.circle,
-          "is-icon": this.icon,
+          "is-icon": this.icon || this.loading,
         },
       ];
     },

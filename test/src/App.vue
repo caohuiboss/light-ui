@@ -121,6 +121,8 @@
       <Button type="primary" icon="li-icon-zuo-copy" round>成功按钮</Button>
     </Button-Group>
 
+    <Button type="primary" loading>主要按钮</Button>
+
     <Dialog :visible.sync="dialog">
       <div slot="header">
         标题
