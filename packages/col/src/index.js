@@ -35,6 +35,7 @@ export default {
     getGutter() {
       let parent = this.$parent
       while (parent && parent.$options.componentName !== 'LiRow') {
+        console.log(1)
         parent = parent.$parent
       }
       return parent ? parent.gutter : 0
@@ -49,7 +50,6 @@ export default {
     getGutter ? style.paddingLeft = style.paddingRight = getGutter / 2 + 'px' : ''
 
     ['span', 'offset', 'pull', 'push'].forEach(v => {
-      console.log(v)
       this[v] || this[v] === 0 ?
         classArray.push(
           v !== 'span'

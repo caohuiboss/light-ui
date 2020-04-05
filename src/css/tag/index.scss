@@ -16,6 +16,30 @@
   -khtml-user-select: none;
   user-select: none;
 
+  &.li-tag-success {
+    background-color: $--background-color-success;
+    border-color: $--border-color-success;
+    color: $--color-success;
+  }
+
+  &.li-tag-info {
+    background-color: #f4f4f5;
+    border-color: #e9e9eb;
+    color: $--color-info;
+  }
+
+  &.li-tag-warning {
+    background-color: #fdf6ec;
+    border-color: #faecd8;
+    color: #e6a23c;
+  }
+
+  &.li-tag-danger {
+    background-color: #fef0f0;
+    border-color: #fde2e2;
+    color: #f56c6c;
+  }
+
   &.li-tag_close {
     border-radius: 50%;
     text-align: center;
@@ -34,9 +58,5 @@
     color: #fff;
     border-radius: 50%;
     background-color: #409eff;
-  }
-
-  .li-icon-close::before {
-    content: "×";
   }
 }

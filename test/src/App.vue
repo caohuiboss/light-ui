@@ -76,10 +76,10 @@
     </div> -->
 
     <!-- <div class="button"> -->
-    <Card>
+    <!-- <Card>
       <div slot="header">1</div>
       <div></div>
-    </Card>
+    </Card> -->
     <!-- </div> -->
 
     <!-- <li-row :gutter="24">
@@ -93,9 +93,15 @@
       <Button type="success" disabled>成功按钮</Button>
       <Button loading>默认按钮</Button>
     </Button-group> -->
-    <!-- <Tag closable>
+    <Tag closable>
       123
-    </Tag> -->
+    </Tag>
+
+    <Tag>标签一</Tag>
+    <Tag type="success">标签二</Tag>
+    <Tag type="info">标签三</Tag>
+    <Tag type="warning">标签四</Tag>
+    <Tag type="danger">标签五</Tag>
 
     <!-- <Dialog :visible.sync="dialog">
       <div slot="header">
@@ -111,13 +117,10 @@
     </Dialog>
 
     <Button type="primary" @click="open">主要按钮</Button> -->
-    <!-- <tags hit>
-      123
-    </tags> -->
 
     <Button-Group>
       <Button type="primary" icon="li-icon-zuo" round @click="dialog = true">主要按钮</Button>
-      <Button type="primary">主要按钮</Button>
+      <Button type="success">主要按钮</Button>
       <Button type="primary" icon="li-icon-zuo-copy" round>成功按钮</Button>
     </Button-Group>
 
@@ -164,6 +167,33 @@ export default {
     .li-button {
       margin: 0 4px;
     }
+  }
+
+  .el-row {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .el-col {
+    border-radius: 4px;
+  }
+  .bg-purple-dark {
+    background: #99a9bf;
+  }
+  .bg-purple {
+    background: #d3dce6;
+  }
+  .bg-purple-light {
+    background: #e5e9f2;
+  }
+  .grid-content {
+    border-radius: 4px;
+    min-height: 36px;
+  }
+  .row-bg {
+    padding: 10px 0;
+    background-color: #f9fafc;
   }
 }
 </style>

@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import "../common/var";
 .li-button {
   width: 94px;
   height: 36px;
@@ -5,8 +7,8 @@
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
-  background: #fff;
-  border: 1px solid #dcdfe6;
+  background: $--background-color-primary;
+  border: 1px solid $--border-color-primary;
   color: #606266;
   -webkit-appearance: none;
   text-align: center;
@@ -63,12 +65,12 @@
 }
 
 .li-button--primary {
-  color: #fff;
-  background-color: #1c7ed6;
-  border-color: #1c7ed6;
+  color: $--color-primary;
+  background-color: $--background-color-primary;
+  border-color: $--border-color-primary;
 
   &:hover {
-    color: #fff;
+    color: $--color-primary;
     background-color: #196eb9;
     border-color: #1c7ed6;
   }

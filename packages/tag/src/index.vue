@@ -63,7 +63,7 @@ export default {
       >
         {slot}
         {closable && (
-          <i class="li-tag_close li-icon-close" on-click={closeTag}></i>
+          <i class="li-tag_close iconfont li-icon-guanbi" on-click={closeTag}></i>
         )}
       </span>
     );
