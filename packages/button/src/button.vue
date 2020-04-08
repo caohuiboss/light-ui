@@ -7,7 +7,7 @@
     :type="nativeType"
     :class="classChange"
   >
-    <i class="iconfont li-icon-jiazai" v-if="loading"></i>
+    <i class="li-iconfont li-icon-loading" v-if="loading"></i>
     <i
       class="iconfont"
       :class="icon"

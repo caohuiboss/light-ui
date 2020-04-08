@@ -69,11 +69,11 @@
   background-color: $--background-color-primary;
   border-color: $--border-color-primary;
 
-  &:hover {
-    color: $--color-primary;
-    background-color: #196eb9;
-    border-color: #1c7ed6;
-  }
+  // &:hover {
+  //   color: $--color-primary;
+  //   background-color: $--background-color-primary;
+  //   border-color: #1c7ed6;
+  // }
 
   &.is-plain {
     color: #ffffff;
