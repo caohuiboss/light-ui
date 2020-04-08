@@ -1,6 +1,6 @@
 {
   "name": "light-ui-color",
-  "version": "0.0.17",
+  "version": "0.0.19",
   "description": "Vue light-ui Components",
   "main": "src/index.js",
   "files": [

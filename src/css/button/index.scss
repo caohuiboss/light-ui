@@ -1,5 +1,5 @@
-@charset "UTF-8";
-@import "../common/var";
+
+
 .li-button {
   width: 94px;
   height: 36px;
@@ -7,8 +7,8 @@
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
-  background: $--background-color-primary;
-  border: 1px solid $--border-color-primary;
+  background: #fff;
+  border: 1px solid #dcdfe6;
   color: #606266;
   -webkit-appearance: none;
   text-align: center;
@@ -54,6 +54,12 @@
     border: 1px solid #dbdde0;
     color: #acacac;
     overflow: hidden;
+
+    &:hover {
+      background: rgb(252, 249, 249);
+      border: 1px solid #dbdde0;
+      color: #acacac;
+    }
   }
 
   &.is-disabled {
@@ -61,19 +67,24 @@
     background: rgb(252, 249, 249);
     border: 1px solid #dbdde0;
     color: #acacac;
+    &:hover {
+      background: rgb(252, 249, 249);
+      border: 1px solid #dbdde0;
+      color: #acacac;
+    }
   }
 }
 
 .li-button--primary {
-  color: $--color-primary;
-  background-color: $--background-color-primary;
-  border-color: $--border-color-primary;
+  color: #fff;
+  background-color: #1c7ed6;
+  border-color: #1c7ed6;
 
-  // &:hover {
-  //   color: $--color-primary;
-  //   background-color: $--background-color-primary;
-  //   border-color: #1c7ed6;
-  // }
+  &:hover {
+    color: #fff;
+    background-color: #196eb9;
+    border-color: #1c7ed6;
+  }
 
   &.is-plain {
     color: #ffffff;
@@ -85,20 +96,6 @@
     color: #fff;
     background-color: #1c7ed6;
     border-color: #1c7ed6;
-  }
-
-  &.is-disabled {
-    cursor: not-allowed;
-    color: #fff;
-    background-color: #4293da;
-    border-color: #7dbcfc;
-  }
-
-  &.is_loading {
-    cursor: not-allowed;
-    color: #fff;
-    background-color: #4293da;
-    border-color: #7dbcfc;
   }
 }
 
@@ -124,20 +121,6 @@
     background-color: #19be6b;
     border-color: #19be6b;
   }
-
-  &.is-disabled {
-    cursor: not-allowed;
-    color: #fff;
-    background-color: #58db9a;
-    border-color: #38ce83;
-  }
-
-  &.is_loading {
-    cursor: not-allowed;
-    color: #fff;
-    background-color: #58db9a;
-    border-color: #38ce83;
-  }
 }
 
 .li-button--warning {
@@ -161,20 +144,6 @@
     color: #fff;
     background-color: #f90;
     border-color: #f90;
-  }
-
-  &.is-disabled {
-    cursor: not-allowed;
-    color: #fff;
-    background-color: rgb(252, 185, 86);
-    border-color: rgb(252, 186, 88);
-  }
-
-  &.is_loading {
-    cursor: not-allowed;
-    color: #fff;
-    background-color: rgb(252, 185, 86);
-    border-color: rgb(252, 186, 88);
   }
 }
 
@@ -200,20 +169,6 @@
     background-color: #ff3300;
     border-color: #ff3300;
   }
-
-  &.is-disabled {
-    cursor: not-allowed;
-    color: #fff;
-    background-color: #fda38d;
-    border-color: #fa8e73;
-  }
-
-  &.is_loading {
-    cursor: not-allowed;
-    color: #fff;
-    background-color: #fda38d;
-    border-color: #fa8e73;
-  }
 }
 
 .li-button--info {
@@ -238,20 +193,6 @@
     background-color: #495057;
     border-color: #495057;
   }
-
-  &.is-disabled {
-    cursor: not-allowed;
-    color: #fff;
-    background-color: #dcdee4;
-    border-color: #d3d4d6;
-  }
-
-  &.is-loading {
-    cursor: not-allowed;
-    color: #fff;
-    background-color: #dcdee4;
-    border-color: #d3d4d6;
-  }
 }
 
 .li-button--text {
@@ -269,20 +210,6 @@
     border: none;
     background: none;
     cursor: not-allowed;
-  }
-
-  &.is-disabled {
-    cursor: not-allowed;
-    color: #67b2fd;
-    border: none;
-    background: none;
-  }
-
-  &.is-loading {
-    cursor: not-allowed;
-    color: #67b2fd;
-    border: none;
-    background: none;
   }
 }
 

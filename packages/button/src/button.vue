@@ -9,7 +9,7 @@
   >
     <i class="li-iconfont li-icon-loading" v-if="loading"></i>
     <i
-      class="iconfont"
+      class="li-iconfont"
       :class="icon"
       :style="[{ float: float }, { margin: margin }]"
       v-if="icon && !loading"

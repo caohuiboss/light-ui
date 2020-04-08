@@ -17,15 +17,15 @@
   user-select: none;
 
   &.li-tag-success {
-    background-color: $--background-color-success;
-    border-color: $--border-color-success;
-    color: $--color-success;
+    color: #fff;
+    background-color: #1c7ed6;
+    border-color: #1c7ed6;
   }
 
   &.li-tag-info {
-    background-color: #f4f4f5;
-    border-color: #e9e9eb;
-    color: $--color-info;
+    color: #fff;
+    background-color: #495057;
+    border-color: #495057;
   }
 
   &.li-tag-warning {
