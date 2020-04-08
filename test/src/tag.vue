@@ -20,6 +20,7 @@ export default {
   }
   &[hit=false]{
       border: none;
+
   }
 }
 </style>

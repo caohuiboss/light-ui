@@ -119,9 +119,9 @@
     <Button type="primary" @click="open">主要按钮</Button> -->
 
     <Button-Group>
-      <Button type="primary" icon="li-icon-zuo" round @click="dialog = true">主要按钮</Button>
+      <Button type="primary" icon="li-icon-left" round @click="dialog = true">主要按钮</Button>
       <Button type="success">主要按钮</Button>
-      <Button type="primary" icon="li-icon-zuo-copy" round>成功按钮</Button>
+      <Button type="primary" icon="li-icon-right-copy" round>成功按钮</Button>
     </Button-Group>
 
     <Button type="primary" loading>主要按钮</Button>

@@ -9,73 +9,73 @@
 
 .iconfont {
   font-family: "iconfont" !important;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.li-icon-wendang:before {
+.li-icon-word:before {
   content: "\e61f";
 }
 
-.li-icon-xiaoxi:before {
+.li-icon-message:before {
   content: "\e604";
 }
 
-.li-icon-shanchu:before {
+.li-icon-del:before {
   content: "\e633";
 }
 
-.li-icon-tupian:before {
+.li-icon-img:before {
   content: "\e656";
 }
 
-.li-icon-sousuo:before {
+.li-icon-search:before {
   content: "\e643";
 }
 
-.li-icon-youjian:before {
+.li-icon-email:before {
   content: "\e635";
 }
 
-.li-icon-shezhi:before {
+.li-icon-setting:before {
   content: "\e605";
 }
 
-.li-icon-yonghu:before {
+.li-icon-user:before {
   content: "\e634";
 }
 
-.li-icon-icon-test:before {
+.li-icon-file:before {
   content: "\e60e";
 }
 
-.li-icon-guanbi:before {
+.li-icon-close:before {
   content: "\e624";
 }
 
-.li-icon-biaoge:before {
+.li-icon-table:before {
   content: "\e600";
 }
 
-.li-icon-zhongzhi:before {
+.li-icon-reset:before {
   content: "\e636";
 }
 
-.li-icon-shouye:before {
+.li-icon-home:before {
   content: "\e615";
 }
 
-.li-icon-fenxiang:before {
+.li-icon-share:before {
   content: "\e667";
 }
 
-.li-icon-icon-test1:before {
+.li-icon-position:before {
   content: "\e61b";
 }
 
-.li-icon-icon-test2:before {
+.li-icon-add:before {
   content: "\e61e";
 }
 
@@ -83,7 +83,7 @@
   content: "\e611";
 }
 
-.li-icon-bianji:before {
+.li-icon-edit:before {
   content: "\e628";
 }
 
@@ -91,37 +91,23 @@
   content: "\e61a";
 }
 
-.li-icon-zanting:before {
+.li-icon-stop:before {
   content: "\e632";
 }
 
-.li-icon-shangchuan:before {
+.li-icon-upload:before {
   content: "\e613";
 }
 
-.li-icon-zuo:before {
+.li-icon-left:before {
   content: "\e61c";
 }
 
-.li-icon-zuo-copy:before {
+.li-icon-right-copy:before {
   content: "\e668";
 }
 
-.li-icon-jiazai:before {
+.li-icon-loading:before {
   content: "\e642";
-}
-
-.li-icon-jiazai {
-  display: inline-block;
-  animation: rotating 1s linear infinite;
-}
-
-@keyframes rotating {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
