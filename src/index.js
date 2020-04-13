@@ -6,6 +6,7 @@ import Row from '../packages/row/index';
 import Col from '../packages/col/index';
 import Tag from '../packages/tag/index';
 import Dialog from '../packages/dialog/index';
+import Input from '../packages/input/index';
 
 
 const components = {
@@ -15,7 +16,8 @@ const components = {
     Col,
     ButtonGroup,
     Tag,
-    Dialog
+    Dialog,
+    Input
 }
 
 const install = function (Vue) {

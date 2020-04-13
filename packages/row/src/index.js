@@ -1,6 +1,6 @@
 export default {
   name: "Row",
-  componentName:"LiRow",
+  componentName:"Row",
 // gutter	栅格间隔	number	—	0
 // type	布局模式，可选 flex，现代浏览器下有效	string	—	—
 // justify	flex 布局下的水平排列方式	string	start/end/center/space-around/space-between	start
@@ -30,7 +30,10 @@ export default {
     style() {
       const gut = {}
       const { gutter } = this
-      gutter ? gut.marginRight = gut.marginLeft = `-${gutter / 2}px` : ""
+      if (gutter) {
+        gut.marginLeft = `-${gutter / 2}px`;
+        gut.marginRight = gut.marginLeft;
+      }
       return gut
     }
   },

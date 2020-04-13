@@ -82,18 +82,18 @@
     </Card> -->
     <!-- </div> -->
 
-    <!-- <li-row :gutter="24">
+    <!-- <Row :gutter="24">
       <Col :span="8">1</Col>
       <Col :span="8">1</Col>
       <Col :span="8">1</Col>
-    </li-row> -->
+    </Row> -->
 
     <!-- <Button-group>
       <Button type="primary" disabled>主要按钮</Button>
       <Button type="success" disabled>成功按钮</Button>
       <Button loading>默认按钮</Button>
     </Button-group> -->
-    <Tag closable>
+    <!-- <Tag closable>
       123
     </Tag>
 
@@ -101,7 +101,7 @@
     <Tag type="success">标签二</Tag>
     <Tag type="info">标签三</Tag>
     <Tag type="warning">标签四</Tag>
-    <Tag type="danger">标签五</Tag>
+    <Tag type="danger">标签五</Tag> -->
 
     <!-- <Dialog :visible.sync="dialog">
       <div slot="header">
@@ -118,7 +118,7 @@
 
     <Button type="primary" @click="open">主要按钮</Button> -->
 
-    <Button-Group>
+    <!-- <Button-Group>
       <Button type="primary" icon="li-icon-left" round @click="dialog = true">主要按钮</Button>
       <Button type="success">主要按钮</Button>
       <Button type="primary" icon="li-icon-right-copy" round>成功按钮</Button>
@@ -137,7 +137,23 @@
         <Button @click="open">主要按钮</Button>
         <Button @click="open">主要按钮</Button>
       </div>
-    </Dialog>
+    </Dialog> -->
+
+    <Input v-model="text" clearable placeholder="请输入内容">
+      <template slot="front">
+        <span>12365146</span>
+      </template>
+    </Input>
+    {{ text }}
+
+    <Card>
+      <div slot="header">
+        标题
+      </div>
+      <div>
+        内容
+      </div>
+    </Card>
   </div>
 </template>
 
@@ -149,13 +165,14 @@ export default {
   data() {
     return {
       dialog: false,
+      text: "5"
     };
   },
   methods: {
     open() {
       this.dialog = false;
-    },
-  },
+    }
+  }
 };
 </script>
 

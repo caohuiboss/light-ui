@@ -1,0 +1,83 @@
+.li-input {
+  width: 100%;
+  position: relative;
+  font-size: 14px;
+  display: inline-block;
+  overflow: hidden;
+
+  .li-input-content {
+    -webkit-appearance: none;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 2px;
+    border: 1px solid #dcdfe6;
+    box-sizing: border-box;
+    color: #606266;
+    display: inline-block;
+    font-size: inherit;
+    line-height: 30px;
+    outline: none;
+    padding: 0 15px;
+    transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    width: 100%;
+  }
+
+  .li-input-hovering {
+    border: 1px solid rgba($color: #000000, $alpha: 0.4);
+  }
+
+  .li-input-focus {
+    border: 1px solid #1c7ed6;
+  }
+
+  .li-input-disabled {
+    border: 1px solid #dcdfe6;
+    background-color: #eeeeee;
+  }
+
+  .li-input-clear {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+      background-color: whitesmoke;
+      border-radius: 50%;
+    }
+  }
+
+  .li-input-group {
+    line-height: normal;
+    display: inline-table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+
+    .li-input-content {
+      vertical-align: middle;
+      display: table-cell;
+    }
+
+    &.li-input-group--front {
+      border-right: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &.li-input-group__front,
+    &.li-input-group__back {
+      background-color: #f5f7fa;
+      color: #909399;
+      vertical-align: middle;
+      display: table-cell;
+      position: relative;
+      border: 1px solid #dcdfe6;
+      border-radius: 2px;
+      padding: 0 15px;
+      width: 1;
+      white-space: nowrap;
+    }
+  }
+}

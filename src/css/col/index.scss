@@ -1,73 +1,156 @@
-// [class*="li-col-"] {
-//   float: left;
-//   box-sizing: border-box;
-// }
+@import "../common/var.scss";
+@import "../common/mixin.scss";
 
-// $--breakpoints: (
-//   'xs' : (max-width: $--sm - 1),
-//   'sm' : (min-width: $--sm),
-//   'md' : (min-width: $--md),
-//   'lg' : (min-width: $--lg),
-//   'xl' : (min-width: $--xl)
-// );
+[class*="li-col-"] {
+  float: left;
+  box-sizing: border-box;
+}
 
-// @mixin res($key, $map: $--breakpoints) {
-//   // 循环断点Map，如果存在则返回
-//   @if map-has-key($map, $key) {
-//     @media only screen and #{inspect(map-get($map, $key))} {
-//       @content;
-//     }
-//   } @else {
-//     @warn "Undefeined points: `#{$map}`";
-//   }
-// }
+.li-col-0 {
+  display: none;
+}
 
+@for $i from 0 through 24 {
+  .li-col-#{$i} {
+    width: (1 / 24 * $i * 100) * 1%;
+  }
 
-// .li-col-0 {
-//   display: none;
-// }
+  .li-col-offset-#{$i} {
+    margin-left: (1 / 24 * $i * 100) * 1%;
+  }
 
-// @for $i from 0 through 24 {
-//   .el-col-#{$i} {
-//     width: (1 / 24 * $i * 100) * 1%;
-//   }
+  .li-col-pull-#{$i} {
+    position: relative;
+    right: (1 / 24 * $i * 100) * 1%;
+  }
 
-//   .el-col-offset-#{$i} {
-//     margin-left: (1 / 24 * $i * 100) * 1%;
-//   }
+  .li-col-push-#{$i} {
+    position: relative;
+    left: (1 / 24 * $i * 100) * 1%;
+  }
+}
 
-//   .el-col-pull-#{$i} {
-//     position: relative;
-//     right: (1 / 24 * $i * 100) * 1%;
-//   }
+@include res(xs) {
+  .li-col-xs-0 {
+    display: none;
+  }
+  @for $i from 0 through 24 {
+    .li-col-xs-#{$i} {
+      width: (1 / 24 * $i * 100) * 1%;
+    }
 
-//   .el-col-push-#{$i} {
-//     position: relative;
-//     left: (1 / 24 * $i * 100) * 1%;
-//   }
-// }
+    .li-col-xs-offset-#{$i} {
+      margin-left: (1 / 24 * $i * 100) * 1%;
+    }
 
-// @include res(xs) {
-//   .el-col-xs-0 {
-//     display: none;
-//   }
-//   @for $i from 0 through 24 {
-//     .el-col-xs-#{$i} {
-//       width: (1 / 24 * $i * 100) * 1%;
-//     }
+    .li-col-xs-pull-#{$i} {
+      position: relative;
+      right: (1 / 24 * $i * 100) * 1%;
+    }
 
-//     .el-col-xs-offset-#{$i} {
-//       margin-left: (1 / 24 * $i * 100) * 1%;
-//     }
+    .li-col-xs-push-#{$i} {
+      position: relative;
+      left: (1 / 24 * $i * 100) * 1%;
+    }
+  }
+}
 
-//     .el-col-xs-pull-#{$i} {
-//       position: relative;
-//       right: (1 / 24 * $i * 100) * 1%;
-//     }
+@include res(sm) {
+  .li-col-sm-0 {
+    display: none;
+  }
+  @for $i from 0 through 24 {
+    .li-col-sm-#{$i} {
+      width: (1 / 24 * $i * 100) * 1%;
+    }
 
-//     .el-col-xs-push-#{$i} {
-//       position: relative;
-//       left: (1 / 24 * $i * 100) * 1%;
-//     }
-//   }
-// }
+    .li-col-sm-offset-#{$i} {
+      margin-left: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .li-col-sm-pull-#{$i} {
+      position: relative;
+      right: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .li-col-sm-push-#{$i} {
+      position: relative;
+      left: (1 / 24 * $i * 100) * 1%;
+    }
+  }
+}
+
+@include res(md) {
+  .li-col-md-0 {
+    display: none;
+  }
+  @for $i from 0 through 24 {
+    .li-col-md-#{$i} {
+      width: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .li-col-md-offset-#{$i} {
+      margin-left: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .li-col-md-pull-#{$i} {
+      position: relative;
+      right: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .li-col-md-push-#{$i} {
+      position: relative;
+      left: (1 / 24 * $i * 100) * 1%;
+    }
+  }
+}
+
+@include res(lg) {
+  .li-col-lg-0 {
+    display: none;
+  }
+  @for $i from 0 through 24 {
+    .li-col-lg-#{$i} {
+      width: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .li-col-lg-offset-#{$i} {
+      margin-left: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .li-col-lg-pull-#{$i} {
+      position: relative;
+      right: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .li-col-lg-push-#{$i} {
+      position: relative;
+      left: (1 / 24 * $i * 100) * 1%;
+    }
+  }
+}
+
+@include res(xl) {
+  .li-col-xl-0 {
+    display: none;
+  }
+  @for $i from 0 through 24 {
+    .li-col-xl-#{$i} {
+      width: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .li-col-xl-offset-#{$i} {
+      margin-left: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .li-col-xl-pull-#{$i} {
+      position: relative;
+      right: (1 / 24 * $i * 100) * 1%;
+    }
+
+    .li-col-xl-push-#{$i} {
+      position: relative;
+      left: (1 / 24 * $i * 100) * 1%;
+    }
+  }
+}
