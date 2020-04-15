@@ -37,7 +37,7 @@
 
   .li-input-clear {
     position: absolute;
-    top: 8px;
+    top: 7px;
     right: 12px;
     overflow: hidden;
     cursor: pointer;
@@ -54,29 +54,35 @@
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
+  }
 
-    .li-input-content {
-      vertical-align: middle;
-      display: table-cell;
-    }
+  .li-input-group-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
 
-    &.li-input-group--front {
-      border-right: 0;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-
-    &.li-input-group__front,
-    &.li-input-group__back {
+    .li-input-group__front {
       background-color: #f5f7fa;
       color: #909399;
-      vertical-align: middle;
-      display: table-cell;
-      position: relative;
-      border: 1px solid #dcdfe6;
       border-radius: 2px;
-      padding: 0 15px;
-      width: 1;
+      border: 1px solid #dcdfe6;
+      border-right: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      padding: 5px 15px 6px 15px;
+      white-space: nowrap;
+    }
+
+    .li-input-group__back {
+      background-color: #f5f7fa;
+      color: #909399;
+      border-radius: 2px;
+      border: 1px solid #dcdfe6;
+      border-left: none;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      padding: 5px 15px 6px 15px;
       white-space: nowrap;
     }
   }

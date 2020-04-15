@@ -141,19 +141,22 @@
 
     <Input v-model="text" clearable placeholder="请输入内容">
       <template slot="front">
-        <span>12365146</span>
+        <span>左</span>
+      </template>
+      <template slot="back">
+        <span>右</span>
       </template>
     </Input>
     {{ text }}
 
-    <Card>
+    <!-- <Card>
       <div slot="header">
         标题
       </div>
       <div>
         内容
       </div>
-    </Card>
+    </Card> -->
   </div>
 </template>
 

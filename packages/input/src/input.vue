@@ -5,39 +5,61 @@
       {
         'is-disabled': inputDisabled,
         'li-input-group': $slots.front || $slots.back,
-        'li-input-group--front': $slots.front,
-        'li-input-group--back': $slots.back,
       },
     ]"
     @mouseenter="hovering = true"
     @mouseleave="hovering = false"
   >
     <template>
-      <div class="li-input-group__front" v-if="$slots.front">
-        <slot name="front"></slot>
+      <div
+        :class="{
+          'li-input-group-flex': $slots.front || $slots.back,
+        }"
+      >
+        <div
+          :class="{
+            'li-input-group__front': $slots.front,
+          }"
+          v-if="$slots.front"
+        >
+          <slot name="front"></slot>
+        </div>
+        <input
+          ref="input"
+          :type="type"
+          :class="[
+            'li-input-content',
+            {
+              'li-input-hovering': hovering,
+              'li-input-focus': focus,
+              'li-input-disabled': disabled,
+            },
+          ]"
+          :placeholder="placeholder"
+          @input="handleInput"
+          @focus="handleFocus"
+          @blur="handleBlur"
+          @change="handleChange"
+          :disabled="inputDisabled"
+          :readonly="readonly"
+        />
+        <span
+          class="li-input-clear"
+          :style="{ right: '50px' }"
+          v-if="clearable && hovering"
+          @click="clear"
+        >
+          <i class="li-iconfont li-icon-close"></i>
+        </span>
+        <div
+          :class="{
+            'li-input-group__back': $slots.back,
+          }"
+          v-if="$slots.back"
+        >
+          <slot name="back"></slot>
+        </div>
       </div>
-      <input
-        ref="input"
-        :type="type"
-        :class="[
-          'li-input-content',
-          {
-            'li-input-hovering': hovering,
-            'li-input-focus': focus,
-            'li-input-disabled': disabled,
-          },
-        ]"
-        :placeholder="placeholder"
-        @input="handleInput"
-        @focus="handleFocus"
-        @blur="handleBlur"
-        @change="handleChange"
-        :disabled="inputDisabled"
-        :readonly="readonly"
-      />
-      <span class="li-input-clear" v-if="clearable && hovering" @click="clear">
-        <i class="li-iconfont li-icon-close"></i>
-      </span>
     </template>
   </div>
 </template>
@@ -56,7 +78,6 @@ export default {
   props: {
     value: [String, Number],
     placeholder: String,
-    size: String,
     type: {
       type: String,
       default: "text",
