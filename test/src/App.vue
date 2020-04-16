@@ -139,7 +139,7 @@
       </div>
     </Dialog> -->
 
-    <Input v-model="text" clearable placeholder="请输入内容">
+    <!-- <Input v-model="text" clearable placeholder="请输入内容">
       <template slot="front">
         <span>左</span>
       </template>
@@ -147,7 +147,7 @@
         <span>右</span>
       </template>
     </Input>
-    {{ text }}
+    {{ text }} -->
 
     <!-- <Card>
       <div slot="header">
@@ -157,6 +157,12 @@
         内容
       </div>
     </Card> -->
+    <Row :gutter="20">
+      <Col :span="6"><div class="grid-content bg-purple"></div></Col>
+      <Col :span="6"><div class="grid-content bg-purple"></div></Col>
+      <Col :span="6"><div class="grid-content bg-purple"></div></Col>
+      <Col :span="6"><div class="grid-content bg-purple"></div></Col>
+    </Row>
   </div>
 </template>
 
@@ -168,14 +174,14 @@ export default {
   data() {
     return {
       dialog: false,
-      text: "5"
+      text: "5",
     };
   },
   methods: {
     open() {
       this.dialog = false;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -189,15 +195,6 @@ export default {
     }
   }
 
-  .el-row {
-    margin-bottom: 20px;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-  .el-col {
-    border-radius: 4px;
-  }
   .bg-purple-dark {
     background: #99a9bf;
   }

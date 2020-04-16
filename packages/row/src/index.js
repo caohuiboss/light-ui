@@ -1,11 +1,8 @@
 export default {
   name: "Row",
-  componentName:"Row",
-// gutter	栅格间隔	number	—	0
-// type	布局模式，可选 flex，现代浏览器下有效	string	—	—
-// justify	flex 布局下的水平排列方式	string	start/end/center/space-around/space-between	start
-// align	flex 布局下的垂直排列方式	string	top/middle/bottom	top
-// tag	自定义元素标签	string	*	div
+  componentName: "Row",
+  // gutter	栅格间隔	number	—	0
+  // tag	自定义元素标签	string	*	div
 
   props: {
     tag: {
@@ -15,41 +12,31 @@ export default {
     gutter: {
       type: Number,
       default: 0
-    },
-    type: String,
-    justify: {
-      type: String,
-      default: 'start'
-    },
-    align: {
-      type: String,
-      default: 'top'
     }
   },
   computed: {
     style() {
-      const gut = {}
+      const res = {}
       const { gutter } = this
       if (gutter) {
-        gut.marginLeft = `-${gutter / 2}px`;
-        gut.marginRight = gut.marginLeft;
+        res.marginLeft = `-${gutter / 2}px`;
+        res.marginRight = res.marginLeft;
       }
-      return gut
+      return res
     }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.$children.forEach(col => {
+        col.gutter = this.gutter
+      })
+    })
   },
 
   render(h) {
-    const { tag, justify, align, type, style, $slots: { default: slot } } = this
-    const classStyle = [
-      'li-row',
-      justify !== 'start' ? `is-justify-${justify}` : '',
-      align !== 'top' ? `is-align-${align}` : '',
-      {
-        'li-row-flex': type === 'flex'
-      }
-    ]
+    const { tag, style, $slots: { default: slot } } = this
     return h(tag, {
-      classStyle,
+      class:['li-row'],
       style
     }, slot)
   }
