@@ -163,6 +163,10 @@
       <Col :span="6"><div class="grid-content bg-purple"></div></Col>
       <Col :span="6"><div class="grid-content bg-purple"></div></Col>
     </Row>
+
+    <div class="temp" v-loading = 'true'>
+
+    </div>
   </div>
 </template>
 
@@ -193,6 +197,12 @@ export default {
     .li-button {
       margin: 0 4px;
     }
+  }
+
+  .temp {
+    width: 200px;
+    height: 200px;
+    background-color: navajowhite;
   }
 
   .bg-purple-dark {

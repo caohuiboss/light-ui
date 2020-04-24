@@ -8,6 +8,8 @@ import Tag from '../packages/tag/index';
 import Dialog from '../packages/dialog/index';
 import Input from '../packages/input/index';
 
+import  '../packages/loading/index';
+
 
 const components = {
     Button,
