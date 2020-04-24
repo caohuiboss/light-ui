@@ -1,0 +1,56 @@
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.8s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.li-message {
+  width: 200px;
+  height: 26px;
+  padding: 10px;
+  position: fixed;
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin: 10px auto;
+  border-radius: 4px;
+  z-index: 99999;
+  color: #eee;
+  text-align: left;
+  background: gray;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .li-message-text {
+    width: 160px;
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  &.li-message-info {
+    background: #495057;
+  }
+
+  &.li-message-warning {
+    background: #f90;
+  }
+
+  &.li-message-error {
+    background: #ff3300;
+  }
+
+  &.li-message-success {
+    background: #19be6b;
+  }
+
+  .li-close:hover {
+    color: black;
+  }
+}

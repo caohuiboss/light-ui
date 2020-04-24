@@ -157,7 +157,7 @@
         内容
       </div>
     </Card> -->
-    <Row :gutter="20">
+    <!-- <Row :gutter="20">
       <Col :span="6"><div class="grid-content bg-purple"></div></Col>
       <Col :span="6"><div class="grid-content bg-purple"></div></Col>
       <Col :span="6"><div class="grid-content bg-purple"></div></Col>
@@ -166,7 +166,9 @@
 
     <div class="temp" v-loading = 'true'>
 
-    </div>
+    </div> -->
+
+    <Button @click="message">主要按钮</Button>
   </div>
 </template>
 
@@ -185,6 +187,15 @@ export default {
     open() {
       this.dialog = false;
     },
+    message(){
+      this.$message({
+        type: 'info',
+        message: '信息集合.....',
+        time: 12000,
+        type:'info',
+        showclose:true
+      })
+    }
   },
 };
 </script>

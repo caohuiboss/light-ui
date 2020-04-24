@@ -19,6 +19,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.li-icon-warning:before {
+  content: "\e61d";
+}
+
+.li-icon-error:before {
+  content: "\e655";
+}
+
+.li-icon-success:before {
+  content: "\e601";
+}
+
+.li-icon-info:before {
+  content: "\eb73";
+}
+
 .li-icon-word:before {
   content: "\e61f";
 }
@@ -113,31 +129,4 @@
 
 .li-icon-loading:before {
   content: "\e642";
-}
-
-.li-icon-loading {
-  display: inline-block;
-  animation: rotates 1s linear infinite;
-}
-
-@keyframes rotates {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  25% {
-    transform: rotate(90deg);
-  }
-
-  50% {
-    transform: rotate(180deg);
-  }
-
-  75% {
-    transform: rotate(270deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
