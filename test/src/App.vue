@@ -164,11 +164,12 @@
       <Col :span="6"><div class="grid-content bg-purple"></div></Col>
     </Row>
 
-    <div class="temp" v-loading = 'true'>
-
-    </div> -->
+   -->
 
     <Button @click="message">主要按钮</Button>
+      <div class="temp" v-loading = 'true'>
+
+    </div>
   </div>
 </template>
 
