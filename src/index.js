@@ -7,6 +7,9 @@ import Col from '../packages/col/index';
 import Tag from '../packages/tag/index';
 import Dialog from '../packages/dialog/index';
 import Input from '../packages/input/index';
+import Message from '../packages/message/index';
+
+import  '../packages/loading/index';
 
 
 const components = {
@@ -24,6 +27,7 @@ const install = function (Vue) {
     Reflect.ownKeys(components).forEach(component => {
         Vue.component(component, components[component]);
     });
+    Vue.prototype.$message = Message
 };
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -33,5 +37,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
     install,
+    Message,
     ...components
 }

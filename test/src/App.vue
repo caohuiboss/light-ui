@@ -157,14 +157,19 @@
         内容
       </div>
     </Card> -->
-    <Row :gutter="20">
+    <!-- <Row :gutter="20">
       <Col :span="6"><div class="grid-content bg-purple"></div></Col>
       <Col :span="6"><div class="grid-content bg-purple"></div></Col>
       <Col :span="6"><div class="grid-content bg-purple"></div></Col>
       <Col :span="6"><div class="grid-content bg-purple"></div></Col>
     </Row>
 
-    <Button loading>默认按钮</Button>
+   -->
+
+    <Button @click="message">主要按钮</Button>
+      <div class="temp" v-loading = 'true'>
+
+    </div>
   </div>
 </template>
 
@@ -183,6 +188,15 @@ export default {
     open() {
       this.dialog = false;
     },
+    message(){
+      this.$message({
+        type: 'info',
+        message: '信息集合.....',
+        time: 12000,
+        type:'info',
+        showclose:true
+      })
+    }
   },
 };
 </script>
@@ -195,6 +209,12 @@ export default {
     .li-button {
       margin: 0 4px;
     }
+  }
+
+  .temp {
+    width: 200px;
+    height: 200px;
+    background-color: navajowhite;
   }
 
   .bg-purple-dark {
