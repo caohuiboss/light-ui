@@ -1,5 +1,5 @@
 export default {
-  name: "Row",
+  name: "row",
   componentName: "Row",
   // gutter	栅格间隔	number	—	0
   // tag	自定义元素标签	string	*	div

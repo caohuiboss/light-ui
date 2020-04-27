@@ -21,7 +21,7 @@
 </template>
 <script>
 export default {
-  name: "Button",
+  name: "Button" || "li-button",
   props: {
     type: {
       // 按钮类型 primary / success / warning / danger / info / text

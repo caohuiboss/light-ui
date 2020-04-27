@@ -163,6 +163,8 @@
       <Col :span="6"><div class="grid-content bg-purple"></div></Col>
       <Col :span="6"><div class="grid-content bg-purple"></div></Col>
     </Row>
+
+    <Button loading>默认按钮</Button>
   </div>
 </template>
 
