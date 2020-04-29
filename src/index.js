@@ -10,6 +10,7 @@ import Input from '../packages/input/index';
 import Message from '../packages/message/index';
 
 import  '../packages/loading/index';
+import  '../packages/directive/el-drag-dialog';
 
 
 const components = {

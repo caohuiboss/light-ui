@@ -1,12 +1,17 @@
 <template>
   <transition name="toggle">
     <div class="li-dialog-backdrop" v-if="visible">
-      <div class="li-dialog" ref="dialog" :style="styles">
-        <div class="li-dialog-header">
+      <div :class="['li-dialog',{'li-dialog-fullscreen':fullscreenTag}]" ref="dialog" :style="styles">
+        <div class="li-dialog-header" @mousedown="mousedown">
           <slot name="header"></slot>
+          <span>
+            <button class="li-close" v-if="fullscreen" @click="onFullSreen">
+            <i class="li-iconfont li-icon-share"></i>
+          </button>
           <button class="li-close" v-if="showClose" @click="onClose">
             <i class="li-iconfont li-icon-close"></i>
           </button>
+          </span>
         </div>
         <div class="li-dialog-body">
           <slot></slot>
@@ -26,6 +31,10 @@ export default {
       type: Boolean,
       default: true
     },
+    fullscreen: {
+      type: Boolean,
+      default: true
+    },
     width: String,
     visible: {
       type: Boolean,
@@ -34,7 +43,8 @@ export default {
   },
   data() {
     return {
-      closeTimer: null
+      closeTimer: null,
+      fullscreenTag:false
     };
   },
   computed: {
@@ -43,9 +53,15 @@ export default {
     }
   },
   methods: {
+    mousedown(){
+      if(this.fullscreenTag) return
+    },
     onClose() {
       this.$emit("on-close");
       this.hide();
+    },
+    onFullSreen(){
+      this.fullscreenTag = !this.fullscreenTag
     },
     hide() {
       this.$emit("update:visible", false);

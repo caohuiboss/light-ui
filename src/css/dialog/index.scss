@@ -5,7 +5,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 99999;
+  z-index: 1999999;
   background-color: rgba(0, 0, 0, 0.4);
 
   .li-dialog {
@@ -16,14 +16,26 @@
     border-radius: 4px;
     position: relative;
     top: 20%;
+    left: 0;
+    right: 0;
+    bottom: 0;
     overflow: hidden;
 
+    &.li-dialog-fullscreen {
+      width: 100% !important;
+      height: 100%;
+      position: relative;
+      z-index: 1999999;
+      top: 0 !important;
+    }
     .li-dialog-header {
       width: 100%;
-      padding: 2px 0;
+      padding: 2px 0 4px 0;
       font-size: 16px;
+      border-bottom: 1px solid #eee;
       display: flex;
       justify-content: space-between;
+      cursor: move;
 
       .li-close {
         width: 40px;
@@ -32,6 +44,17 @@
         border: none;
         background: none;
         outline-style: none;
+        margin-right: 10px;
+      }
+
+      .li-close:nth-child(1) {
+        width: 40px;
+        height: 20px;
+        text-align: center;
+        border: none;
+        background: none;
+        outline-style: none;
+        margin-right: 0px;
       }
 
       .li-close:hover {
@@ -46,7 +69,8 @@
 
     .li-dialog-footer {
       width: 100%;
-      padding: 10px 0;
+      padding: 8px 0;
+      border-top: 1px solid #eee;
     }
   }
 }
